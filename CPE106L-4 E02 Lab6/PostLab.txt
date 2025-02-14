@@ -1,1 +1,24 @@
-(Placeholder text!)
+use music_store
+
+db.artists.insertOne({
+  "ArtistId": 1,
+  "Name": "Tame Impala"
+});
+
+db.albums.insertOne({
+  "AlbumId": 1,
+  "Title": "Currents",
+  "Artist": { "ArtistId": 1, "Name": "Tame Impala" }
+});
+
+db.media_types.insertMany([
+  { "MediaTypeId": 1, "Name": "MP3" },
+  { "MediaTypeId": 2, "Name": "AAC" },
+  { "MediaTypeId": 3, "Name": "FLAC" }
+]);
+
+db.genres.insertMany([
+  { "GenreId": 1, "Name": "Psychedelic Rock" },
+  { "GenreId": 2, "Name": "Alternative" },
+  { "GenreId": 3, "Name": "Electronic" }
+]);
