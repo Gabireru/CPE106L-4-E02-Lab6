@@ -22,3 +22,38 @@ db.genres.insertMany([
   { "GenreId": 2, "Name": "Alternative" },
   { "GenreId": 3, "Name": "Electronic" }
 ]);
+
+db.tracks.insertMany([
+  {
+    "TrackId": 1,
+    "Name": "Let It Happen",
+    "Album": { "AlbumId": 1, "Title": "Currents" },
+    "MediaTypeId": 3,
+    "GenreId": 3,
+    "Composer": "Kevin Parker",
+    "Milliseconds": 476000,
+    "Bytes": 15324352,
+    "UnitPrice": 1.29
+  },
+  {
+    "TrackId": 2,
+    "Name": "The Less I Know The Better",
+    "Album": { "AlbumId": 1, "Title": "Currents" },
+    "MediaTypeId": 3,
+    "GenreId": 1,
+    "Composer": "Kevin Parker",
+    "Milliseconds": 216000,
+    "Bytes": 7892345,
+    "UnitPrice": 1.29
+  }
+]);
+
+db.playlists.insertOne({
+  "PlaylistId": 1,
+  "Name": "Chill Vibes"
+});
+
+db.playlist_track.insertMany([
+  { "PlaylistId": 1, "TrackId": 1 },
+  { "PlaylistId": 1, "TrackId": 2 }
+]);
