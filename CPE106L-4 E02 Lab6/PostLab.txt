@@ -5,11 +5,13 @@ db.artists.insertOne({
   "Name": "Tame Impala"
 });
 
+
 db.albums.insertOne({
   "AlbumId": 1,
   "Title": "Currents",
   "Artist": { "ArtistId": 1, "Name": "Tame Impala" }
 });
+
 
 db.media_types.insertMany([
   { "MediaTypeId": 1, "Name": "MP3" },
