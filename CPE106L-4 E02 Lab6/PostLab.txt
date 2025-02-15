@@ -102,3 +102,20 @@ db.invoices.insertOne({
   "BillingCountry": "USA",
   "Total": 2.58
 });
+
+db.invoice_items.insertMany([
+  {
+    "InvoiceItemId": 1,
+    "InvoiceId": 1,
+    "TrackId": 1,
+    "UnitPrice": 1.29,
+    "Quantity": 1
+  },
+  {
+    "InvoiceItemId": 2,
+    "InvoiceId": 1,
+    "TrackId": 2,
+    "UnitPrice": 1.29,
+    "Quantity": 1
+  }
+]);
